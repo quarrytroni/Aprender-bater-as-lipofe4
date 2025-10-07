@@ -1,1 +1,50 @@
 
+# Configuración recomendada para BMS Daly 60A (8S) en batería LiFePO₄ 24V / 105Ah
+
+Este documento resume la configuración óptima de la **BMS Daly Smart 60A con WiFi/Bluetooth** para una batería de **8 celdas LiFePO₄ en serie (8S)**, 105 Ah, voltaje nominal ~25.6 V (comúnmente llamada "24V").
+
+> ⚠️ **Importante**: Usa la app oficial **"Daly BMS"** (Android/iOS) para ajustar los parámetros.
+
+---
+
+## 🔋 Especificaciones del pack
+- **Química**: LiFePO₄ (LFP)  
+- **Configuración**: 8S  
+- **Capacidad**: 105 Ah  
+- **Voltaje nominal**: 25.6 V (8 × 3.2 V)  
+- **BMS**: Daly Smart BMS 60A (8S)
+
+---
+
+## ⚙️ Parámetros de configuración
+
+### 1. Protección por voltaje (por celda)
+| Parámetro                     | Valor recomendado |
+|------------------------------|-------------------|
+| Over-voltage protection      | 3.60 V            |
+| Over-voltage release         | 3.50 V            |
+| Under-voltage protection     | 2.50 V            |
+| Under-voltage release        | 2.80 V            |
+
+> **Total pack**:  
+> - Corte alto: **28.8 V**  
+> - Corte bajo: **20.0 V**
+
+---
+
+### 2. Protección por corriente
+| Parámetro                          | Valor recomendado |
+|-----------------------------------|-------------------|
+| Sobrecorriente de carga           | 50–60 A           |
+| Sobrecorriente de descarga        | 55–60 A           |
+| Retardo de cortocircuito          | 80–100 µs (por defecto OK) |
+
+---
+
+### 3. Equilibrio (Balance)
+| Parámetro               | Valor recomendado |
+|------------------------|-------------------|
+| Voltaje inicio balance | 3.40 V            |
+| Corriente de balance   | ~30–50 mA (fijo en Daly) |
+
+> 💡 Usa cargas lentas (0.2C–0.3C ≈ 2
