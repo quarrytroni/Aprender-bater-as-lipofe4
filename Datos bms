@@ -1,12 +1,4 @@
 
-# Configuración recomendada para BMS Daly 60A (8S) en batería LiFePO₄ 24V / 105Ah
-
-Este documento resume la configuración óptima de la **BMS Daly Smart 60A con WiFi/Bluetooth** para una batería de **8 celdas LiFePO₄ en serie (8S)**, 105 Ah, voltaje nominal ~25.6 V (comúnmente llamada "24V").
-
-> ⚠️ **Importante**: Usa la app oficial **"Daly BMS"** (Android/iOS) para ajustar los parámetros.
-
----
-
 ## 🔋 Especificaciones del pack
 - **Química**: LiFePO₄ (LFP)  
 - **Configuración**: 8S  
@@ -47,4 +39,44 @@ Este documento resume la configuración óptima de la **BMS Daly Smart 60A con W
 | Voltaje inicio balance | 3.40 V            |
 | Corriente de balance   | ~30–50 mA (fijo en Daly) |
 
-> 💡 Usa cargas lentas (0.2C–0.3C ≈ 2
+> 💡 Usa cargas lentas (0.2C–0.3C ≈ 20–30 A) en los primeros ciclos para favorecer el equilibrio.
+
+---
+
+### 4. Temperatura (si usas sensores)
+| Parámetro                     | Valor recomendado |
+|------------------------------|-------------------|
+| Máx. temp. carga             | 45–50 °C          |
+| Mín. temp. carga             | **0 °C** ⚠️       |
+| Máx. temp. descarga          | 60 °C             |
+| Mín. temp. descarga          | -20 °C            |
+
+> ❗ **Nunca cargues LiFePO₄ por debajo de 0 °C**, incluso si no tienes sensores.
+
+---
+
+### 5. Otros ajustes
+- **Cell count**: 8S (verificar en app)  
+- **Capacidad (Capacity)**: **105 Ah** → mejora cálculo de SOC  
+- **Calibración SOC**:  
+  1. Carga completa hasta 100% (todas las celdas ≥ 3.55 V).  
+  2. En la app: *Settings > SOC Calibration > Set to 100%*.
+
+---
+
+## ✅ Checklist final
+- [ ] Voltajes de protección: **3.60 V / 2.50 V por celda**  
+- [ ] Corrientes ≤ 60 A  
+- [ ] Balance inicia en **3.40 V**  
+- [ ] Capacidad configurada: **105 Ah**  
+- [ ] Conexiones correctas: P-, C-, B1–B8, y sensores (si aplica)  
+- [ ] Primera carga: **lenta (20–30 A)** y supervisada
+
+---
+
+## 📱 Monitoreo
+- Revisa diariamente los voltajes por celda en la app.  
+- Diferencias > 0.02 V tras varios ciclos pueden indicar una celda débil.  
+- El equilibrio puede requerir **varios ciclos completos** para estabilizarse.
+
+> ✨ Con esta configuración, tu batería tendrá máxima seguridad, rendimiento y vida útil (miles de ciclos).
