@@ -11,27 +11,38 @@
 ## ⚙️ Parámetros de configuración
 
 ### 1. Protección por voltaje (por celda)
-| Parámetro                     | Valor recomendado |
-|------------------------------|-------------------|
-| Over-voltage protection      | 3.60 V            |
-| Over-voltage release         | 3.50 V            |
-| Under-voltage protection     | 2.50 V            |
-| Under-voltage release        | 2.80 V            |
-
+| Parámetro                        | Valor recomendado |
+|----------------------------------|-------------------|
+| single Overvoltage protection    | 3.60 V            |
+| single Undervoltage protection   | 2.50 V            |
 > **Total pack**:  
-> - Corte alto: **28.8 V**  
-> - Corte bajo: **20.0 V**
-
----
-
+| T Overvoltage protection         | 28.4 V            |  
+| T Undervolage protection         | 21.2 V            |
+| Voltage Difference Protection    | ???????           |
 ### 2. Protección por corriente
-| Parámetro                          | Valor recomendado |
-|-----------------------------------|-------------------|
-| Sobrecorriente de carga           | 50–60 A           |
-| Sobrecorriente de descarga        | 55–60 A           |
-| Retardo de cortocircuito          | 80–100 µs (por defecto OK) |
-
+| Parámetro                        | Valor recomendado |
+| Charging Overcurrent Protection  | 50.0 A            |
+| discharge Overcurrent Protection | 60.0 A            |
+| short circuit trigger protection | 250 A             |
+| hardware accelerated S C protect | open              |
 ---
+### 3. acquisition board settings
+| Acquisition Board Number         | 0                 |
+| Acquisition Board 1 Monomer Numb | 8                 |
+| Acquisition Board 1 temperature N| 2                 |
+---
+
+### 4. Temperatura (si usas sensores)
+| Parámetro                       | Valor recomendado |
+|---------------------------------|-------------------|
+| Máx. temp. carga                | 55 °C             |
+| Mín. temp. carga                |  0 °C  ⚠️         |
+| Máx. temp. descarga             | 55 °C             |
+| Mín. temp. descarga             | -5 °C             |
+| 
+
+ ❗ **Nunca cargues LiFePO₄ por debajo de 0 °C**, incluso si no tienes sensores.
+
 
 ### 3. Equilibrio (Balance)
 | Parámetro               | Valor recomendado |
@@ -40,18 +51,6 @@
 | Corriente de balance   | ~30–50 mA (fijo en Daly) |
 
 > 💡 Usa cargas lentas (0.2C–0.3C ≈ 20–30 A) en los primeros ciclos para favorecer el equilibrio.
-
----
-
-### 4. Temperatura (si usas sensores)
-| Parámetro                     | Valor recomendado |
-|------------------------------|-------------------|
-| Máx. temp. carga             | 45–50 °C          |
-| Mín. temp. carga             | **0 °C** ⚠️       |
-| Máx. temp. descarga          | 60 °C             |
-| Mín. temp. descarga          | -20 °C            |
-
-> ❗ **Nunca cargues LiFePO₄ por debajo de 0 °C**, incluso si no tienes sensores.
 
 ---
 
